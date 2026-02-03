@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VibeRO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+    <img src="https://image2url.com/r2/default/images/1770092922281-a46f7160-5438-4285-825d-5476c6a25264.blob" class="logo-gif">
+    <p>Loading VibeRO...</p>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">VibeRO</div>
+    <div class="nav-buttons">
+        <button onclick="openAbout()">Despre Noi</button>
+        <a href="https://discord.gg/4sa4paZbDE" target="_blank">Contact</a>
+        <button onclick="openOwner()">Owner</button>
+    </div>
+</nav>
+
+<!-- SITE -->
+<div id="site">
+    <div class="container">
+        <h1>VibeRO</h1>
+        <p>Server romanesc sociabil si modern</p>
+        <p>Joaca jocuri pe voice, vorbeste liber si fa-ti prieteni</p>
+        <p>Staff activ, comunitate noua, vibe 2026</p>
+
+        <a class="join" href="https://discord.gg/4sa4paZbDE" target="_blank">
+            Join Discord
+        </a>
+    </div>
+
+    <footer>
+        Site made by <b>VibeRO Staff</b>
+    </footer>
+</div>
+
+<!-- MODAL DESPRE -->
+<div class="modal" id="aboutModal">
+    <div class="modal-box">
+        <h2>Despre VibeRO</h2>
+        <p>
+            VibeRO este un server romanesc creat pentru socializare,
+            distractie si prietenii reale.  
+            Aici poti sta pe voice, te poti juca,
+            discuta liber si face parte dintr-o comunitate moderna.
+        </p>
+        <button onclick="closeModals()">Inchide</button>
+    </div>
+</div>
+
+<!-- MODAL OWNER -->
+<div class="modal" id="ownerModal">
+    <div class="modal-box">
+        <h2>Owner</h2>
+        <p><b>Gruia</b></p>
+        <p>Fondator VibeRO</p>
+        <p>Membru Special in Lua Script</p>
+        <button onclick="closeModals()">Inchide</button>
+    </div>
+</div>
+
+<!-- MUZICA BACKGROUND (MP3 DIRECT) -->
+<audio autoplay loop>
+    <source src="music/vibero.mp3" type="audio/mpeg">
+</audio>
+
+<!-- CURSOR -->
+<div id="cursor">.</div>
+
+<script src="script.js"></script>
+</body>
+</html>
