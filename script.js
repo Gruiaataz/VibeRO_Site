@@ -24,18 +24,13 @@ function closeModals() {
     document.querySelectorAll(".modal").forEach(m => m.style.display = "none");
 }
 
-// MUZICA (PC + MOBILE SAFE)
+// MUZICA – PORNESTE LA CLICK STANGA
 const music = document.getElementById("bgMusic");
+let musicStarted = false;
 
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
+document.addEventListener("mousedown", () => {
+    if (!musicStarted) {
+        music.play().catch(() => {});
+        musicStarted = true;
     }
-}
-
-// porneste muzica la primul click (browser rule)
-document.addEventListener("click", () => {
-    music.play().catch(() => {});
-}, { once: true });
+});
