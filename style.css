@@ -35,7 +35,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 15px 40px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,11 +49,11 @@ nav {
 
 .nav-buttons button,
 .nav-buttons a {
-    margin-left: 15px;
+    margin-left: 10px;
     background: none;
     border: 1px solid #444;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
@@ -65,25 +65,23 @@ nav {
     background: #7289da;
 }
 
-/* SITE */
+/* SITE + FADE IN */
 #site {
     display: none;
     height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
 }
 
-#site::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, #111 0%, #000 70%);
-    animation: bg 40s linear infinite;
-    z-index: -1;
-}
-
-@keyframes bg {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .container {
@@ -106,7 +104,7 @@ p {
 
 .join {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 15px 40px;
     border: 2px solid #7289da;
     color: white;
@@ -120,10 +118,20 @@ p {
     transform: scale(1.08);
 }
 
+.music-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 /* FOOTER */
 footer {
     position: fixed;
-    bottom: 15px;
+    bottom: 10px;
     width: 100%;
     text-align: center;
     opacity: 0.6;
@@ -148,20 +156,39 @@ footer {
     text-align: center;
 }
 
-.modal-box button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    border: none;
-    background: #7289da;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 /* CURSOR */
 #cursor {
     position: fixed;
     font-size: 22px;
     pointer-events: none;
     z-index: 9999;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    body {
+        cursor: default;
+    }
+
+    #cursor {
+        display: none;
+    }
 }
