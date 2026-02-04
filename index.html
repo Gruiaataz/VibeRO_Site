@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <title>VibeRO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,12 +29,14 @@
     <div class="container">
         <h1>VibeRO</h1>
         <p>Server romanesc sociabil si modern</p>
-        <p>Joaca jocuri pe voice, vorbeste liber si fa-ti prieteni</p>
-        <p>Staff activ, comunitate noua, vibe 2026</p>
+        <p>Voice, jocuri, prieteni si vibe bun</p>
+        <p>Staff activ • Comunitate noua 2026</p>
 
         <a class="join" href="https://discord.gg/4sa4paZbDE" target="_blank">
             Join Discord
         </a>
+
+        <button class="music-btn" onclick="toggleMusic()">Play / Pause Music</button>
     </div>
 
     <footer>
@@ -46,10 +49,9 @@
     <div class="modal-box">
         <h2>Despre VibeRO</h2>
         <p>
-            VibeRO este un server romanesc creat pentru socializare,
-            distractie si prietenii reale.  
-            Aici poti sta pe voice, te poti juca,
-            discuta liber si face parte dintr-o comunitate moderna.
+            VibeRO este o comunitate romaneasca axata pe socializare,
+            voice activ si distractie.  
+            Aici poti vorbi liber, juca jocuri si lega prietenii.
         </p>
         <button onclick="closeModals()">Inchide</button>
     </div>
@@ -59,16 +61,15 @@
 <div class="modal" id="ownerModal">
     <div class="modal-box">
         <h2>Owner</h2>
-        <p><b>Gruia</b></p>
+        <p><b>gruiaa69</b></p>
         <p>Fondator VibeRO</p>
-        <p>Membru Special in Lua Script</p>
         <button onclick="closeModals()">Inchide</button>
     </div>
 </div>
 
-<!-- MUZICA BACKGROUND (MP3 DIRECT) -->
-<audio autoplay loop>
-    <source src="vibero.mp3" type="audio/mpeg">
+<!-- MUZICA -->
+<audio id="bgMusic" loop>
+    <source src="music/vibero.mp3" type="audio/mpeg">
 </audio>
 
 <!-- CURSOR -->
@@ -77,4 +78,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
